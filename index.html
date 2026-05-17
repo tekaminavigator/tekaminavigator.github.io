@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Tekami Navigator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --maroon:      #460809;
+      --maroon-mid:  #6b0c0d;
+      --maroon-pale: #fdf3f3;
+      --gold:        #c9972b;
+      --text:        #1a1a1a;
+      --muted:       #5c5c5c;
+      --border:      #e8d5d5;
+      --white:       #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────── */
+    header {
+      background: var(--maroon);
+      color: var(--white);
+      padding: 64px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,0.015) 40px,
+        rgba(255,255,255,0.015) 80px
+      );
+    }
+
+    .header-icon {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      position: relative;
+    }
+
+    .header-subtitle {
+      font-size: 1.1rem;
+      font-weight: 300;
+      opacity: 0.75;
+      margin-top: 6px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      position: relative;
+    }
+
+    .header-date {
+      display: inline-block;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      position: relative;
+    }
+
+    /* ── TOC ─────────────────────────────────────────────────────────── */
+    .toc-wrap {
+      background: var(--maroon-pale);
+      border-top: 3px solid var(--maroon);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 24px;
+    }
+
+    .toc-inner {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .toc-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 6px 24px;
+    }
+
+    .toc-grid a {
+      color: var(--maroon-mid);
+      text-decoration: none;
+      font-size: 0.88rem;
+      padding: 3px 0;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .toc-grid a:hover {
+      color: var(--maroon);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ── Main content ────────────────────────────────────────────────── */
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    section {
+      margin-bottom: 52px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--maroon);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    h2 .num {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      font-family: 'Source Serif 4', serif;
+      background: var(--maroon-pale);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--maroon-mid);
+      margin: 28px 0 10px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text);
+      font-size: 0.97rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 10px 0 14px 0;
+      padding: 0;
+    }
+
+    ul li {
+      position: relative;
+      padding: 5px 0 5px 24px;
+      font-size: 0.97rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--maroon-pale);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* ── Role table ──────────────────────────────────────────────────── */
+    .role-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+
+    .role-table th {
+      background: var(--maroon);
+      color: var(--white);
+      padding: 10px 14px;
+      text-align: left;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .role-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .role-table tr:nth-child(even) td {
+      background: var(--maroon-pale);
+    }
+
+    .role-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 2px 8px;
+      border-radius: 3px;
+      background: var(--maroon);
+      color: var(--white);
+    }
+
+    /* ── Deletion steps ──────────────────────────────────────────────── */
+    .steps {
+      counter-reset: steps;
+      margin: 16px 0;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      list-style: none;
+      padding: 10px 10px 10px 52px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .steps li:last-child { border-bottom: none; }
+
+    .steps li::before {
+      content: counter(steps);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      background: var(--maroon);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .steps li::marker { content: none; }
+
+    /* ── Highlight box ───────────────────────────────────────────────── */
+    .callout {
+      background: var(--maroon-pale);
+      border-left: 4px solid var(--maroon);
+      border-radius: 0 6px 6px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.93rem;
+    }
+
+    /* ── Contact ─────────────────────────────────────────────────────── */
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .contact-item:last-child { border-bottom: none; }
+
+    .contact-label {
+      font-weight: 600;
+      color: var(--maroon);
+      min-width: 80px;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .contact-item a {
+      color: var(--maroon-mid);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .contact-item a:hover { border-bottom-color: var(--gold); }
+
+    /* ── Footer ──────────────────────────────────────────────────────── */
+    footer {
+      background: var(--maroon);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+
+    footer strong { color: rgba(255,255,255,0.9); }
+
+    /* ── Responsive ──────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      header { padding: 48px 20px 40px; }
+      main { padding: 36px 20px 60px; }
+      .toc-grid { grid-template-columns: 1fr; }
+      .role-table { font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="header-icon">🗺️</span>
+    <div class="header-title">Tekami Navigator</div>
+    <div class="header-subtitle">Ethiopia's Address Navigation System</div>
+    <div class="header-date">Privacy Policy &nbsp;·&nbsp; Effective May 12, 2026</div>
+  </header>
+
+  <div class="toc-wrap">
+    <div class="toc-inner">
+      <div class="toc-label">Contents</div>
+      <div class="toc-grid">
+        <a href="#s1">1. Introduction</a>
+        <a href="#s2">2. Information We Collect</a>
+        <a href="#s3">3. How We Use Your Information</a>
+        <a href="#s4">4. Data Storage &amp; Security</a>
+        <a href="#s5">5. Data Sharing</a>
+        <a href="#s6">6. User Roles &amp; Data Access</a>
+        <a href="#s7">7. Account Deletion</a>
+        <a href="#s8">8. Your Rights</a>
+        <a href="#s9">9. Children's Privacy</a>
+        <a href="#s10">10. Changes to This Policy</a>
+        <a href="#s11">11. Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <section id="s1">
+      <h2><span class="num">01</span> Introduction</h2>
+      <p>Tekami Navigator ("the App") is Ethiopia's address navigation system developed by Tekami. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use the App.</p>
+      <p>By using Tekami Navigator, you agree to the terms described in this policy.</p>
+    </section>
+
+    <section id="s2">
+      <h2><span class="num">02</span> Information We Collect</h2>
+
+      <h3>Account Information</h3>
+      <p>When you register, we collect:</p>
+      <ul>
+        <li>First name and father's name</li>
+        <li>Email address</li>
+        <li>Phone number (optional)</li>
+        <li>Password (stored as a secure hash — never in plain text)</li>
+      </ul>
+
+      <h3>Location Data</h3>
+      <p>The App uses your device's GPS to:</p>
+      <ul>
+        <li>Determine your current position for navigation</li>
+        <li>Record GPS coordinates when you save an address to the database</li>
+        <li>Track your position while navigation is active</li>
+      </ul>
+      <div class="callout">Location data is only used while the App is open and active. We do not collect location data in the background.</div>
+
+      <h3>Address Data You Save</h3>
+      <p>When you save an address (Data Collector role and above), we store:</p>
+      <ul>
+        <li>Region, city, woreda, kebele, street, and house number</li>
+        <li>GPS coordinates of the saved location</li>
+        <li>Accuracy information of the GPS fix</li>
+        <li>The email of the user who collected the data (for accountability)</li>
+      </ul>
+
+      <h3>Arrival Feedback</h3>
+      <p>When you complete navigation and confirm whether you arrived at the correct location, we record a correct or incorrect count against the saved coordinate. This data is anonymous and is used only to improve address accuracy.</p>
+    </section>
+
+    <section id="s3">
+      <h2><span class="num">03</span> How We Use Your Information</h2>
+      <ul>
+        <li>To provide turn-by-turn navigation using Ethiopian address data</li>
+        <li>To authenticate your account and control access by role</li>
+        <li>To allow authorized users to save and manage address data</li>
+        <li>To improve the accuracy of saved locations over time using arrival feedback</li>
+        <li>To maintain the integrity and security of the address database</li>
+      </ul>
+    </section>
+
+    <section id="s4">
+      <h2><span class="num">04</span> Data Storage &amp; Security</h2>
+      <p>Your data is stored on secure servers hosted in the United States. We implement the following security measures:</p>
+      <ul>
+        <li>Passwords are hashed using BCrypt and never stored in plain text</li>
+        <li>All API communications use HTTPS/TLS encryption</li>
+        <li>Access to address-saving features is restricted by user role</li>
+        <li>JWT tokens are used for authentication with 24-hour expiry</li>
+      </ul>
+    </section>
+
+    <section id="s5">
+      <h2><span class="num">05</span> Data Sharing</h2>
+      <p>We do not sell, trade, or rent your personal information to third parties. We do not share your personal data with advertisers or marketing companies.</p>
+      <p>Address coordinate data may be used internally to improve the navigation system.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="num">06</span> User Roles &amp; Data Access</h2>
+      <p>The App uses a role-based access system. Each role has different data access permissions:</p>
+      <table class="role-table">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Permissions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="role-badge">User</span></td>
+            <td>Can navigate and search addresses. Cannot save addresses.</td>
+          </tr>
+          <tr>
+            <td><span class="role-badge">Data Collector</span></td>
+            <td>Can save addresses and GPS coordinates to the database.</td>
+          </tr>
+          <tr>
+            <td><span class="role-badge">Admin</span></td>
+            <td>Can manage Data Collector accounts and save addresses.</td>
+          </tr>
+          <tr>
+            <td><span class="role-badge">Super Admin</span></td>
+            <td>Full system access including role management.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Only administrators can view which email address collected a specific location entry.</p>
+    </section>
+
+    <section id="s7">
+      <h2><span class="num">07</span> Account Deletion</h2>
+      <p>You can delete your account directly from within the App — no email or waiting required:</p>
+      <ol class="steps">
+        <li>Open Tekami Navigator on your device</li>
+        <li>Tap the <strong>☰ menu</strong> button in the top-right corner</li>
+        <li>Tap <strong>My Profile</strong></li>
+        <li>Tap <strong>Delete Account</strong> and confirm</li>
+      </ol>
+      <div class="callout">
+        When you delete your account, your personal information — name, email, phone number, and password — is <strong>permanently removed from our systems immediately</strong>. Address coordinates that you collected remain in the database but are no longer linked to your identity. This preserves the integrity of Ethiopia's address data for other users.
+      </div>
+    </section>
+
+    <section id="s8">
+      <h2><span class="num">08</span> Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction of inaccurate personal data</li>
+        <li>Delete your account and personal data at any time (see Section 7)</li>
+        <li>Withdraw consent to location access by disabling GPS permissions in your device settings</li>
+      </ul>
+    </section>
+
+    <section id="s9">
+      <h2><span class="num">09</span> Children's Privacy</h2>
+      <p>Tekami Navigator is not intended for use by children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us so we can remove it.</p>
+    </section>
+
+    <section id="s10">
+      <h2><span class="num">10</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this document. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section id="s11">
+      <h2><span class="num">11</span> Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or how your data is handled, please contact us:</p>
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:support@tekami.com">support@tekami.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Website</span>
+        <a href="https://tekaminavigator.com" target="_blank">tekaminavigator.com</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <strong>Tekami Navigator</strong> &nbsp;·&nbsp; © 2026 All rights reserved &nbsp;·&nbsp; Ethiopia's Address Navigation System
+  </footer>
+
+</body>
+</html>
