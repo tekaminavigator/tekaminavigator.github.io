@@ -1,1 +1,1 @@
-# tekaminavigator.github.io
+# Tekami Navigator GPS
